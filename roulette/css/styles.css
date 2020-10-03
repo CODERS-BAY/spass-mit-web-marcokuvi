@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(32, 102, 62);
+}
+
+header {
+    color: white;
+    font-size: 65px;
+    background-color: black;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+    text-align: center;
+    height: 100px;
+    padding-top: 10px;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 100px;
+}
+
+.roulette {
+    border-radius: 50%;
+    width: 480px;
+    height: 480px;
+}
+
+.mainbox {
+    position: relative;
+    width: 480px;
+    height: 480px;
+}
+
+.mainbox::after {
+    position: absolute;
+    content: '';
+    width: 35px;
+    height: 32px;
+    background: url('../pics/left-arrow.png');
+    background-size: 32px;
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all ease 5s;
+}
+
+.spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: white;
+    cursor: pointer;
+}
+
+.spin:active {
+    width: 35px;
+    height: 35px;
+}
+
+.mainbox.animate:after {
+    animation: animateArrow 0.7s ease infinite;
+}
+
+@keyframes animateArrow {
+    50% {
+        right: 7px;
+    }
+}
+
+section {
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+}
+
+input[type=text],
+[type=number],
+[type=score],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid greenyellow;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.submit {
+    width: 70px;
+    padding: 12px;
+    border: 2px solid greenyellow;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    cursor: pointer;
+}
+
+.container {
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 60px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 20px;
+    -webkit-box-shadow: -20px 20px 30px 15px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -20px 20px 30px 15px rgba(0, 0, 0, 0.75);
+    box-shadow: -20px 20px 30px 15px rgba(0, 0, 0, 0.75);
+}
+
+.scoreinput {
+    width: 30%;
+    margin-left: 50px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 60px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 20px;
+    -webkit-box-shadow: -20px 20px 30px 15px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -20px 20px 30px 15px rgba(0, 0, 0, 0.75);
+    box-shadow: -20px 20px 30px 15px rgba(0, 0, 0, 0.75);
+}
+
+footer {
+    padding: 20px;
+    position: relative;
+    bottom: 0px;
+    margin-top: 70px;
+    text-align: center;
+    display: inline-flex;
+    background: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    border: solid black 1px;
+}
+
+footer>div {
+    padding: 5%;
+}
+
+footer div {
+    flex-basis: 50%;
+    margin-bottom: 10px;
+}
+
+.social {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.container-footer {
+    width: 100%;
+    display: block;
+}
+
+.fab {
+    color: white;
+}
+
+h5 {
+    font-size: 20px;
+    text-align: center;
+}
+
+@media (max-width: 850px) {
+    footer {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        box-shadow: none;
+    }
+    .roulette {
+        border-radius: 50%;
+        width: 350px;
+        height: 350px;
+    }
+    .mainbox {
+        position: relative;
+        width: 350px;
+        height: 350px;
+    }
+    section {
+        display: block;
+    }
+    .container {
+        width: 100%;
+        box-shadow: none;
+    }
+    .scoreinput {
+        width: 100%;
+        margin-left: 0;
+        box-shadow: none;
+    }
+}

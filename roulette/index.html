@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roulette</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+  <header>
+    Roulette
+  </header>
+
+  <main>
+    <article>
+
+
+      <div id="mainbox" class="mainbox">
+        <div id="box" class="box">
+
+          <img class="roulette" src="pics/roulette.jpg" alt="roulette">
+        </div>
+        <button class="spin" onclick="rotateRoulette()"></button>
+
+    </article>
+    
+    <section>
+
+      <div class="container">
+        <form action="" method="">
+          <label for="name"> Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name..">
+
+          <label for="chooseNumber">Choose a number</label>
+          <input type="number" min="0" max="36" id="number" name="number" placeholder="Your number..">
+
+          <label for="one-third">Choose one-third</label>
+          <select id="one-third" name="one-third">
+            <option value="first">1-12</option>
+            <option value="second">13-24</option>
+            <option value="third">25-36</option>
+          </select>
+
+          <label for="colors">Colors</label>
+          <select id="colors" name="colors">
+            <option value="australia">Red</option>
+            <option value="canada">Black</option>
+          </select>
+
+          <button class="submit">Good luck</button>
+      </div>
+      <div class="scoreinput">
+        <label for="score">Coins</label>
+        <input id="hitcoins" type="score" min="0" max="1000" id="score" name="number" placeholder="0000">
+        <p id="scorelist">Your just hit 0 Coins</p>
+        <label for="score">Current Coins</label>
+        <input type="score" min="0" id="score" name="score" placeholder="0000">
+        <button id="scorebutton" onclick="changeScore()">Score</button>
+
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="leftcontent">
+      <h5>About Us</h5>
+      <p>
+        We're not a real Roulette game.
+        All the content you see on this page has only one purpose to fill the template. It's not a real website. We are
+        a small development team and we need that as a template for our website.
+      </p>
+    </div>
+    <div class="centercontent">
+      <h5>More of us</h5>
+      <p>
+        If you want to see more of us, make sure you follow us on all social media channels
+      </p>
+      <div class="social">
+        <a href="#"><span class="fab fa-facebook-f"></span></a>
+        <a href="#"><span class="fab fa-twitter"></span></a>
+        <a href="#"><span class="fab fa-instagram"></span></a>
+        <a href="#"><span class="fab fa-youtube"></span></a>
+      </div>
+    </div>
+    <div class="rightcontent">
+      <h5>Contact Us</h5>
+      <div class="containerf-ooter">
+        <form action="" method="">
+          <label for="fname">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name..">
+
+          <label for="Message">Message</label>
+          <textarea type="text" id="message" name="message" placeholder="Your Message.."
+            style="height:100px"></textarea>
+
+          <button class="send">Submit</button>
+        </form>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="myScript.js"></script>
+
+</body>
+
+</html>
